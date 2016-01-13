@@ -1109,7 +1109,7 @@ foreach my $advid (sort(keys(%{$xml}))) {
   # Generate OVAL ID for redhat security errata
   $ovalid = "";
   if (!$centos_xen_errata && $advid =~ /(CESA|CLSA)-(\d+):(\d+)/) {
-    $ovalid = "oval:com.redhat.rhsa:def:$1".sprintf("%04d", $2);
+    $ovalid = "oval:com.redhat.rhsa:def:$2".sprintf("%04d", $3);
     debug("Processing $advid -- OVAL ID is $ovalid\n");
   }
 
